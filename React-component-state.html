@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+        <div id="d8"></div>
+        <div id="d9"></div>
+        <div id="d10"></div>
+        <div id="d11"></div>
+        <div id="d12"></div>
+        <div id="d13"></div>
+        <div id="d14"></div>
+        <div id="d15"></div>
+        <div id="d16"></div>
+        <div id="d17"></div>
+        <div id="d18"></div>
+        <div id="d19"></div>
+        <div id="d20"></div>
+        <script type="text/babel">
+            function Sri(){
+                return <h1>Srikanth, ReactJs developer</h1>
+            }
+            ReactDOM.render(<Sri></Sri>,document.getElementById('d1'));
+// 
+            var a=30;
+            function Exp(){
+               return <h1>{a}{'Ram'+'krishna'}</h1>
+            }
+            ReactDOM.render(<Exp></Exp>,document.getElementById('d2'));
+// 
+
+            var arr=[13,28,34,43,68];
+            function Anumbers(){
+               return  arr.map((n)=>{
+                    return <h1>{n}</h1>
+                })
+            }
+            ReactDOM.render(<Anumbers></Anumbers>,document.getElementById('d3'));
+// 
+
+            var strn=['srikanth','saikrishna','venkatesh'];
+            function Ftcstrn(){
+                return strn.map((s)=>{
+                    return <h1>{s[0]+s[1]}</h1>
+                })
+            }
+            ReactDOM.render(<Ftcstrn></Ftcstrn>,document.getElementById('d4'));
+// 
+
+            var ftn=14;
+            function Sqrroot(){
+                return <h1>{Math.sqrt(ftn)}</h1>
+            }
+            ReactDOM.render(<Sqrroot></Sqrroot>,document.getElementById('d5'));
+
+
+            function Parsein(){
+                return <h1>{parseInt(134.42)}</h1>
+            }
+            ReactDOM.render(<Parsein></Parsein>,document.getElementById('d6'));
+
+            
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,508 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div style="margin: 10px;" id="d1"></div>
+    <div style="margin: 10px;" id="d2"></div>
+    <div style="margin: 10px;" id="d3"></div>
+    <div style="margin: 10px;" id="d4"></div>
+    <div style="margin: 10px;" id="d5"></div>
+    <div style="margin: 10px;" id="d6"></div>
+    <div style="margin: 10px;" id="d7"></div>
+    <div style="margin: 10px;" id="d8"></div>
+    <div style="margin: 10px;" id="d9"></div>
+    <div style="margin: 10px;" id="d10"></div>
+    <div style="margin: 10px;" id="d11"></div>
+    <div style="margin: 10px;" id="d12"></div>
+    <div style="margin: 10px;" id="d13"></div>
+    <div style="margin: 10px;" id="d14"></div>
+    <div style="margin: 10px;" id="d15"></div>
+    <div style="margin: 10px;" id="d16"></div>
+    <div style="margin: 10px;" id="d17"></div>
+    <div style="margin: 10px;" id="d18"></div>
+    <div style="margin: 10px;" id="d19"></div>
+    <div style="margin: 10px;" id="d20"></div>
+    <div style="margin: 10px;" id="d21"></div>
+    <div style="margin: 10px;" id="d22"></div>
+    <div style="margin: 10px;" id="d23"></div>
+    <div style="margin: 10px;" id="d24"></div>
+    <div style="margin: 10px;" id="d25"></div>
+    <div style="margin: 10px;" id="d26"></div>
+    <div style="margin: 10px;" id="d27"></div>
+    <div style="margin: 10px;" id="d28"></div>
+    <div style="margin: 10px;" id="d29"></div>
+    <div style="margin: 10px;" id="d30"></div>
+    <div style="margin: 10px;" id="d31"></div>
+    <div style="margin: 10px;" id="d32"></div>
+    <div style="margin: 10px;" id="d33"></div>
+    <div style="margin: 10px;" id="d34"></div>
+    <div style="margin: 10px;" id="d35"></div>
+    <div style="margin: 10px;" id="d36"></div>
+    <div style="margin: 10px;" id="d37"></div>
+    <div style="margin: 10px;" id="d38"></div>
+    <div style="margin: 10px;" id="d39"></div>
+    <div style="margin: 10px;" id="d40"></div>
+    <script type="text/babel">
+
+
+        var jb = <button onClick={() => { ab() }}>click here to see alert</button>
+        function ab() {
+            alert('Hello Edupoly');
+        }
+        ReactDOM.render(jb, document.getElementById('d1'));
+
+
+        var jb1 = <button onClick={() => { abc() }}>click and open console</button>
+        function abc() {
+            console.log('Hello Edupoly');
+        }
+        ReactDOM.render(jb1, document.getElementById('d2'));
+
+        var jb2 = <button onClick={(event) => { abcd(event) }}>click and open console</button>
+        function abcd(e) {
+            console.log(e);
+        }
+        ReactDOM.render(jb2, document.getElementById('d3'));
+
+        var jb3 = <div style={{ width: '300px', height: '200px', border: '2px solid' }} onClick={(event) => { abcde(event) }}>click and open console</div>
+        function abcde(e) {
+            console.log(e);
+        }
+        ReactDOM.render(jb3, document.getElementById('d4'));
+
+        var jb4 = <div style={{ width: '300px', height: '200px', border: '2px solid' }} onClick={(event) => { bc(event) }}>click and open console</div>
+        function bc(e) {
+            console.log(e.clientX);
+            console.log(e.clientY);
+        }
+        ReactDOM.render(jb4, document.getElementById('d5'));
+
+        var jb5 = <div style={{ width: '300px', height: '200px', border: '2px solid' }} onClick={(event) => { bcd(event) }}>Welcome to Edupoly ReactJs</div>
+        function bcd(e) {
+            console.log(e.target.innerHTML);
+        }
+        ReactDOM.render(jb5, document.getElementById('d6'));
+
+        var jb6 = <div id='mydiv' style={{ width: '300px', height: '200px', border: '2px solid' }} onClick={(event) => { bcde(event) }}>Welcome to Edupoly ReactJs</div>
+        function bcde(e) {
+            console.log(e.target.id);
+        }
+        ReactDOM.render(jb6, document.getElementById('d7'));
+
+        var jh1 = <h1 onClick={(event) => { cd(event) }}>Welcome to Edupoly ReactJs</h1>
+        function cd(e) {
+            console.log(e.target.innerHTML);
+        }
+        ReactDOM.render(jh1, document.getElementById('d8'));
+
+        var jh2 = <div>
+            <input id='inp1' type='text' />
+            <button onClick={() => { cde() }}>Click here and see console</button>
+        </div>
+        function cde() {
+            console.log(document.getElementById('inp1').value);
+        }
+        ReactDOM.render(jh2, document.getElementById('d9'));
+
+        var jh3 = <div>
+            <input id='inp2' type='text' />
+            <button onClick={() => { cdef() }}>Click here to create h1</button>
+            <h1 id='ih1'></h1>
+        </div>
+        function cdef() {
+            document.getElementById('ih1').innerHTML = document.getElementById('inp2').value
+        }
+        ReactDOM.render(jh3, document.getElementById('d10'));
+
+        var jh4 = <div>
+            <input id='inp3' type='text' />
+            <button onClick={() => { de() }}>Click here to create h1</button>
+            <h1 id='ih2'></h1>
+        </div>
+        function de() {
+            document.getElementById('ih2').innerHTML = document.getElementById('inp3').value.toUpperCase()
+        }
+        ReactDOM.render(jh4, document.getElementById('d11'));
+
+        var jh5 = <div>
+            <input id='inp4' type='text' onKeyUp={() => { def() }} />
+            <h1 id='ih3'></h1>
+        </div>
+        function def() {
+            document.getElementById('ih3').innerHTML = document.getElementById('inp4').value.toUpperCase()
+        }
+        ReactDOM.render(jh5, document.getElementById('d12'));
+
+
+        var jh6 = <div>
+            <input id='inp5' type='text' onBlur={() => { defg() }} />
+            <h1 id='ih4'></h1>
+        </div>
+        function defg() {
+            document.getElementById('ih4').innerHTML = document.getElementById('inp5').value.toUpperCase()
+        }
+        ReactDOM.render(jh6, document.getElementById('d13'));
+
+
+        var jh7 = <div>
+            <input id='inp6' type='text' onKeyUp={() => { defgh() }} />
+            <h1 id='ih5'></h1>
+        </div>
+        function defgh() {
+            document.getElementById('ih5').innerHTML = document.getElementById('inp6').value;
+        }
+        ReactDOM.render(jh7, document.getElementById('d14'));
+
+        var jh8 = <div>
+            <input id='inp7' type='text' onKeyUp={() => { ef() }} />
+            <h1 id='ih6'></h1>
+            <button onClick={() => { efg() }}>Clear</button>
+        </div>
+        function ef() {
+            document.getElementById('ih6').innerHTML = document.getElementById('inp7').value;
+        }
+        function efg() {
+            document.getElementById('inp7').value = '';
+            document.getElementById('ih6').innerHTML = document.getElementById('inp7').value;
+        }
+        ReactDOM.render(jh8, document.getElementById('d15'));
+
+        var jh9 = <div>
+            <input id='inp8' type='number' />
+            <input id='inp9' type='number' />
+            <h1 id='ih7'></h1>
+            <button onClick={() => { efgh() }}>Add</button>
+        </div>
+        function efgh() {
+            var x = +document.getElementById('inp8').value;
+            var y = +document.getElementById('inp9').value;
+            document.getElementById('ih7').innerHTML = x + y;
+        }
+        ReactDOM.render(jh9, document.getElementById('d16'));
+
+        var jh10 = <div>
+            <input id='inp10' type='number' />
+            <input id='inp11' type='number' />
+            <h1 id='ih8'></h1>
+            <button onClick={() => { fg() }}>Subtract</button>
+        </div>
+        function fg() {
+            var x = +document.getElementById('inp10').value;
+            var y = +document.getElementById('inp11').value;
+            document.getElementById('ih8').innerHTML = x - y;
+        }
+        ReactDOM.render(jh10, document.getElementById('d17'));
+
+
+        var jh11 = <div>
+            <input id='inp12' type='number' />
+            <input id='inp13' type='number' />
+            <h1 id='ih9'></h1>
+            <button onClick={() => { fgh() }}>Multiflication</button>
+            <button onClick={() => { fghi() }}>Division</button>
+        </div>
+        function fgh() {
+            var x = +document.getElementById('inp12').value;
+            var y = +document.getElementById('inp13').value;
+            document.getElementById('ih9').innerHTML = x * y;
+        }
+        function fghi() {
+            var x = +document.getElementById('inp12').value;
+            var y = +document.getElementById('inp13').value;
+            document.getElementById('ih9').innerHTML = x / y;
+        }
+        ReactDOM.render(jh11, document.getElementById('d18'));
+
+
+        var jh12 = <div>
+            <input value='India' name='country' type='radio' onChange={(event) => { gh(event) }} />IND
+            <input value='United States Of America' name='country' type='radio' onChange={(event) => { ghi(event) }} />USA
+            <h1 id='ih10'></h1>
+        </div>
+        function gh(e) {
+            document.getElementById('ih10').innerHTML = e.target.value;
+        }
+        function ghi(e) {
+            document.getElementById('ih10').innerHTML = e.target.value;
+        }
+        ReactDOM.render(jh12, document.getElementById('d19'));
+
+
+        var jh13 = <div>
+            <input value='https://cdn-icons-png.freepik.com/256/3135/3135715.png' name='Gender' type='radio' onChange={(event) => { ghij(event) }} />:Male
+            <input value='https://cdn-icons-png.freepik.com/256/2922/2922561.png?ga=GA1.1.146440035.1707815794&semt=ais' name='Gender' type='radio' onChange={(event) => { hi(event) }} />:Female<br />
+            <img src='' id='img1' />
+        </div>
+        function ghij(e) {
+            document.getElementById('img1').src = e.target.value;
+        }
+        function hi(e) {
+            document.getElementById('img1').src = e.target.value;
+        }
+        ReactDOM.render(jh13, document.getElementById('d20'));
+
+
+        var jh14 = <div>
+            <select onChange={(event) => { hij(event) }}>
+                <option value="Ind">India</option>
+                <option value="USA">United states Of America</option>
+                <option value="SRI">Srilanka</option>
+            </select>
+            <h1 id='ih11'></h1>
+        </div>
+        function hij(e) {
+            console.log(e);
+            document.getElementById('ih11').innerHTML = e.target.value;
+        }
+        ReactDOM.render(jh14, document.getElementById('d21'));
+
+
+        var jh15 = <div>
+            <input onChange={(event) => { handletechs(event) }} value='ReactJS' type='checkbox' />:ReactJS<br />
+            <input onChange={(event) => { handletechs(event) }} value='Angular' type='checkbox' />:Angular<br />
+            <input onChange={(event) => { handletechs(event) }} value='Nodejs' type='checkbox' />:Nodejs<br />
+            <input onChange={(event) => { handletechs(event) }} value='Express' type='checkbox' />:Express<br />
+            <input onChange={(event) => { handletechs(event) }} value='Mongodb' type='checkbox' />:Mongodb<br />
+            <input onChange={(event) => { handletechs(event) }} value='Mongoose' type='checkbox' />:Mongoose<br />
+            <input onChange={(event) => { handletechs(event) }} value='MySql' type='checkbox' />:MySql<br />
+            <h1 id='ih12'></h1>
+        </div>
+        var techs = [];
+        function handletechs(e) {
+            if (e.target.checked === false) {
+                var i = techs.indexOf(e.target.value)
+                techs.splice(i, 1);
+            }
+            else {
+                techs.push(e.target.value);
+            }
+            document.getElementById('ih12').innerHTML = techs
+        }
+        ReactDOM.render(jh15, document.getElementById('d22'));
+
+
+        var jh16 = <div>
+            <input onChange={(event) => { currentdate(event) }} type='date' />
+            <h1 id='ih13'></h1>
+        </div>
+        function currentdate(e) {
+            var newdate = new Date(e.target.value)
+            document.getElementById('ih13').innerHTML = newdate.toLocaleDateString()
+        }
+        ReactDOM.render(jh16, document.getElementById('d23'));
+
+
+        var jh17 = <div>
+            <button onClick={() => { prnt(1) }}>button1</button>
+            <button onClick={() => { prnt(10) }}>button2</button>
+            <button onClick={() => { prnt(200) }}>button3</button>
+            <button onClick={() => { prnt(999) }}>button4</button>
+            <h1 id='ih14'></h1>
+        </div>
+        function prnt(a) {
+            document.getElementById('ih14').innerHTML = a;
+        }
+        ReactDOM.render(jh17, document.getElementById('d24'));
+
+
+        var str = ['srikanth', 'venkatesh', 'saikrishna', 'sairam'];
+        var jh18 = <ul>
+            {str.map(function (s, i) {
+                return <li onClick={() => { getindex(i) }}>{s}</li>
+            })}
+        </ul>
+        function getindex(ind) {
+            alert(ind)
+        }
+        ReactDOM.render(jh18, document.getElementById('d25'));
+
+
+        var strn = ['srikanth', 'venkatesh', 'saikrishna', 'sairam'];
+        var jh19 = <ul>
+            {strn.map(function (s) {
+                return <li onClick={() => { getv(s) }}>{s}</li>
+            })}
+        </ul>
+        function getv(v) {
+            alert(v);
+        }
+        ReactDOM.render(jh19, document.getElementById('d26'));
+
+
+        var strns = [{ Fname: 'srikanth' }, { Fname: 'venkatesh' }, { Fname: 'saikrishna' }, { Fname: 'sairam' }];
+        var jh20 = <ul>
+            {strns.map(function (s) {
+                return <li onClick={() => { getval(s) }}>{s.Fname}</li>
+            })}
+        </ul>
+        function getval(v) {
+            alert(v.Fname);
+        }
+        ReactDOM.render(jh20, document.getElementById('d27'));
+
+
+        var strnss = [{ Fname: 'srikanth', Lname: 'Sandu' },
+        { Fname: 'venkatesh', Lname: 'venky' },
+        { Fname: 'saikrishna', Lname: 'uppalapati' },
+        { Fname: 'sairam', Lname: 'sai' }];
+        var jh21 = <div>
+            <ul>
+                {strnss.map(function (s, i) {
+                    return <li>{s.Fname}<button onClick={() => { geti(s, i) }}>See</button></li>
+
+                })}
+            </ul>
+            <h1 id='ph1'></h1>
+        </div>
+        function geti(v, r) {
+            document.getElementById('ph1').innerHTML = v.Lname + ' is at index' + r;
+        }
+        ReactDOM.render(jh21, document.getElementById('d28'));
+
+
+        var strngs = ['srikanth', 'venkatesh', 'saikrishna', 'sairam'];
+        var jh22 = <div>
+            <ul>
+                {strngs.map(function (s, i) {
+                    return <li onClick={() => { geth(s, i) }}>{s}</li>
+                })}
+            </ul>
+            <h1 id='ph2'></h1>
+            <h2 id='ph3'></h2>
+        </div>
+        function geth(v, r) {
+            document.getElementById('ph2').innerHTML = v;
+            document.getElementById('ph3').innerHTML = r;
+        }
+        ReactDOM.render(jh22, document.getElementById('d29'));
+
+        var val = 280;
+        var jp1 = <h1>{val}</h1>
+        ReactDOM.render(jp1, document.getElementById('d30'));
+
+
+        var val = 20;
+        var jp2 = <div>
+            <h1 id='jh'>{val}</h1>
+            <button onClick={() => { inc() }}>Increment</button>
+        </div>
+        function inc() {
+            val = val + 1;
+            document.getElementById('jh').innerHTML = val
+        }
+        ReactDOM.render(jp2, document.getElementById('d31'));
+
+        var valu = 20;
+        var jp3 = <div>
+            <h1 id='hh'>{valu}</h1>
+            <button onClick={() => { Dec() }}>Decrement</button>
+        </div>
+        function Dec() {
+            valu = valu - 1;
+            document.getElementById('hh').innerHTML = valu
+        }
+        ReactDOM.render(jp3, document.getElementById('d32'));
+
+
+        var k = 20;
+        var jp4 = <div>
+            <h1 id='jhj'>{val}</h1>
+            <button onClick={() => { incr() }}>Increment</button>
+            <button onClick={() => { Decr() }}>Decrement</button>
+        </div>
+        function incr() {
+            k = k + 1;
+            document.getElementById('jhj').innerHTML = k
+        }
+        function Decr() {
+            k = k - 1;
+            document.getElementById('jhj').innerHTML = k
+        }
+        ReactDOM.render(jp4, document.getElementById('d33'));
+
+
+        var j = 20;
+        var jp5 = <div>
+            <h1 id='jkj'>{val}</h1>
+            <button onClick={() => { incrm() }}>Increment</button>
+            <button onClick={() => { Decrm() }}>Decrement</button>
+            <button onClick={() => { Re() }}>Reset</button>
+        </div>
+        function incrm() {
+            j = j + 1;
+            document.getElementById('jkj').innerHTML = j
+        }
+        function Decrm() {
+            j = j - 1;
+            document.getElementById('jkj').innerHTML = j
+        }
+        function Re() {
+            j = 20;
+            document.getElementById('jkj').innerHTML = j
+        }
+        ReactDOM.render(jp5, document.getElementById('d34'));
+
+
+        var bgh = [];
+        var jp6 = <div>
+            <input id='rt' type='text' />
+            <button onClick={() => { pushh() }}>Click here push value</button>
+            <h1 id='jug'></h1>
+        </div>
+        function pushh() {
+            bgh.push(document.getElementById('rt').value);
+            document.getElementById('jug').innerHTML = bgh;
+        }
+        ReactDOM.render(jp6, document.getElementById('d35'));
+
+
+        var bghj=[];
+        var jp7 = <div>
+            <input id='rty' type='text' />
+            <button onClick={() => { pushhh() }}>Click here push value</button>
+            <ul id='ulala'>
+                
+            </ul>
+        </div>
+
+        function pushhh() {
+            bghj.push(document.getElementById('rty').value);
+           var res= genli(bghj);
+          ReactDOM.render(res,document.getElementById('ulala'))
+        }
+        function genli(b){
+              var rg=  b.map(function(f){
+                    return <li>{f}</li>
+                })
+                return rg; 
+            }
+        ReactDOM.render(jp7, document.getElementById('d36'));
+
+
+        
+        var jp8=<h1 id='hj'></h1>
+        setInterval(() => {
+            var d= new Date();
+            document.getElementById('hj').innerHTML=`${d.getHours()}: ${d.getMinutes()}: ${d.getSeconds()}`
+        }, 1000);
+        
+        ReactDOM.render(jp8, document.getElementById('d37'));
+
+        // var jp9=<h1 id='hj'></h1>
+        // setInterval(() => {
+        //     var sec=20;
+        //     var mse=0
+        //     document.getElementById('hj').innerHTML=`${sec}:${0}`
+        // }, 1000);
+        
+        // ReactDOM.render(jp8, document.getElementById('d37'));
+    </script>
+
+</body>
+
+</html>

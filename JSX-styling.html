@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+        <div id="d8"></div>
+        <div style="flex-wrap: nowrap;" id="d4"></div>
+        <script type="text/babel">
+            var jh1 = <h1 style={{color:'red',backgroundColor:'green'}}>Hello Edupoly</h1>
+            ReactDOM.render(jh1,document.getElementById('d1'));
+
+// 
+            var students=['srikanth','sai','karim','sandeep','venky'];
+            var jd1=<ul style={{display:'flex',listStyle:'none'}}>
+                        { students.map(function(a){
+                            return <li style={{width:'100px',backgroundColor:'pink',margin:'10px',textAlign:'center'}}>{a}</li>
+                         })}
+                    </ul>
+            ReactDOM.render(jd1,document.getElementById('d2'));
+
+// 
+            var obj1={
+                       'name':'srikanth',
+                       'age':'24',
+                       'gender':'male'
+                     }
+            var obj=<div style={{border:'2px solid',paddingLeft:'10px'}} >
+                            <h1>Name:{obj1.name}</h1>
+                            <h3>age:{obj1.age}</h3>
+                            <h4>gender:{obj1.gender}</h4>
+                    </div>
+            ReactDOM.render(obj,document.getElementById('d3'));
+
+
+            var users=[
+                        {
+                            FirstName:'Praveen',
+                            LastName:'Gubbala',
+                            Age:'40',
+                            Gender:'male'
+                        },
+                        {
+                            FirstName:'Srikanth',
+                            LastName:'Sandu',
+                            Age:'30',
+                            Gender:'male'
+                        },
+                        {
+                            FirstName:'Saikrishna',
+                            LastName:'Uppalapati',
+                            Age:'43',
+                            Gender:'male'
+                        },
+                        {
+                            FirstName:'Sairam',
+                            LastName:'sai',
+                            Age:'34',
+                            Gender:'female'
+                        },
+                        {
+                            FirstName:'Sairam',
+                            LastName:'sai',
+                            Age:'34',
+                            Gender:'male'
+                        }
+
+                      ];
+            var ud=<div style={{display:'flex',flexWrap:'wrap'}}>
+                        {users.map((user)=>{
+                            return <div style={{ display:'flex',width:'fit-content',border:'1px solid',margin:'10px'}}> 
+                                       <div style={user.Gender=='male'?{backgroundColor:'blue',width:'250px'}:{backgroundColor:'pink',width:'250px'}}>
+                                            <h2>FirstName:{user.FirstName}</h2>
+                                            <h2>LastName:{user.LastName}</h2>
+                                            <h2>Age:{user.Age}</h2>
+                                            <h2>Gender:{user.Gender}</h2>
+                                       </div>
+                                       {user.Gender==='male'&&<img style={{width:'150px'}} src="https://cdn-icons-png.freepik.com/256/3135/3135715.png"/>}
+                                       {user.Gender==='female'&&<img style={{width:'150px'}} src="https://cdn-icons-png.freepik.com/256/2922/2922561.png?ga=GA1.1.146440035.1707815794&semt=ais"/>}
+                                   </div>
+                        })}
+                    </div>
+            ReactDOM.render(ud,document.getElementById('d4'));
+
+            var pinkclr='pink';
+            var jtb=<table border='1'>
+                           {users.map((user)=>{
+                            return <tr style={user.Gender==='female'?{backgroundColor:pinkclr}:{backgroundColor:'blue'}}>
+                                       <td>{user.FirstName}</td>
+                                       <td>{user.LastName}</td>
+                                       <td>{user.Age}</td>
+                                       <td>{user.Gender}</td>
+                                   </tr>
+                           })}
+                    </table>
+            ReactDOM.render(jtb,document.getElementById('d5'));
+
+            var a=23;
+            var clr1='green';
+            var clr2='red';
+            var bwidth='5px solid';
+            var jhh=<div>
+                         <h1 style={{color:clr1,backgroundColor:clr2,border:bwidth}}>Edupoly</h1>
+                         <h1 style={{color:clr2,backgroundColor:clr1}}>Edupoly</h1>
+                         <h1 style={a%2===0?{color:clr1,backgroundColor:clr2}:{color:clr2,backgroundColor:clr1}}>{a}</h1>
+                    </div>
+
+            ReactDOM.render(jhh,document.getElementById('d6'))
+
+
+            var s='srikanth';
+            var jh3=<h1 style={s.length%2===0?{color:'green'}:{color:'red'}}>{s}</h1>
+            ReactDOM.render(jh3,document.getElementById('d7'));
+
+
+            var numberss=[14,23,32,43,5,6,8,3];
+            var numul=<ul>{
+                           numberss.map((n)=>{
+                            return <li style={n%2===0?{color:'green'}:{color:'red'}}>{n}</li>
+                           })
+                         }
+                       </ul>
+            ReactDOM.render(numul,document.getElementById('d8'));
+
+            
+        </script>
+    </body>
+</html>

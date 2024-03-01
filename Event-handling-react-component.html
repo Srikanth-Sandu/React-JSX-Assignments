@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div margin="10px" id="d1"></div>
+        <div margin="10px" id="d2"></div>
+        <div margin="10px" id="d3"></div>
+        <script type="text/babel">
+            function Balert(){
+                function alt(){
+                    alert('hii edupoly');
+                }
+                return <button onClick={()=>{alt()}}>Click here to see</button>
+            }
+            ReactDOM.render(<Balert/>,document.getElementById('d1'))
+
+
+            function Divclick(){
+                function eve(e){
+                    console.log(e);
+                    console.log(e.clientX);
+                    console.log(e.clientY);
+                    console.log(e.target.innerHTML);
+                }
+                return <div onClick={(event)=>{eve(event)}} style={{width:'300px',height:'200px',border:'2px solid'}}>React component</div>
+            }
+            ReactDOM.render(<Divclick/>,document.getElementById('d2')); 
+
+            var students=[{Fname:'srikanth',
+                            Lname:'sandu',
+                            Age:'25'
+                              },
+                              {Fname:'saikrishna',
+                            Lname:'uppalapati',
+                            Age:'29'
+                              },
+                              {Fname:'venkatesh',
+                            Lname:'venky',
+                            Age:'35'
+                              }]
+            function Studtable(){
+                return <table border='1'>
+                         <thead>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                        </thead>
+                             {students.map((s)=>{
+                               return  <tr>
+                                    <td>{s.Fname}</td>
+                                    <td>{s.Lname}</td>
+                                    <td>{s.Age}</td>
+                                   </tr>
+                             })
+                              }
+                       </table>
+            }
+            ReactDOM.render(<Studtable/>,document.getElementById('d3')); 
+
+
+            
+        </script>
+    </body>
+</html>

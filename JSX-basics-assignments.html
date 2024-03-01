@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+            .clr{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>created by HTML Tag</h1>
+        <div id="dd"></div>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <img id="img1" src="">
+
+        <script type="text/babel">
+            var dh1=document.createElement('h1');
+            dh1.innerHTML="Using Javascript DOM" ;
+            dh1.style.backgroundColor='pink';
+            document.getElementById('dd').appendChild(dh1)
+
+// 
+           var rh1= React.createElement('h1',{style:{color:'red'}},'welcome to React.js');
+           var d1= document.getElementById('d1');
+           ReactDOM.render(rh1,d1);
+
+// 
+           var jh1=<div style={{backgroundColor:'green'}}>
+                        <h1>Welcome to JSX</h1>
+                        <h2>{"Welcome"+"to"+"JSX"}</h2>
+                        <p>addition of 10 and 20 is {10+20}</p>
+                   </div>
+           ReactDOM.render(jh1,d2);
+
+// 
+           var students =['srikanth','saikrishna','sairam','karim','venkatesh'];
+           var jh2=<div>
+                       <ul>
+                            { students.map(function(s){
+                                return <li style={{color:"red"}}>{s}</li>
+                            })}
+                       </ul>
+                   </div>
+                   ReactDOM.render(jh2,document.getElementById('d3'));
+
+            var arrnum=[1,2,2,3,3,4,8];    
+            var jh3=<h1>
+                        {arrnum}
+                    </h1>       
+            ReactDOM.render(jh3,document.getElementById('d4'));
+
+            var a=270;
+            var b=300;
+            var c=460;
+            var x=+prompt();
+            var y=+prompt();
+
+
+            var jh4 = <div>
+                           <h1>
+                              {students}
+                           </h1>
+                           <h1>
+                               {Math.sqrt(14)}
+                           </h1>
+                           <h1>
+                               {parseInt(134.67)}
+                           </h1>
+                           <h1>
+                                {'Srikanth'.toUpperCase()}
+                           </h1>
+                           <h1>
+                                {'Srikanth'.length} 
+                           </h1>
+                           <h1>
+                                {'srikanth'.split('').reverse().join('')}
+                            </h1>
+                            <h1>
+                                {a+b}
+                            </h1>
+                            <h1>
+                                {a>b?a:b}
+                            </h1>
+                            <h1>
+                                {x%2===0?x+" is even":x+" is odd"}
+                            </h1>
+                            <h1>
+                                {a>0?a+" is positive":a+' is negative'}
+                            </h1>
+                            <h1>
+                                {a>b?(a>c?a:c):(b>c?b:c)}
+                            </h1>
+                                {a>b?<h1>true</h1>:<h1>False</h1>}
+
+                            <div>
+                                {x%2===0?<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrjtNVIoesRaukkpGZ5ApIKj4iwk_NHzHTqQ&usqp=CAU'/>:<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdzH_56eGeTmiEDMfn7p71MHze6x46a_W-kQ&usqp=CAU'/>}
+                            </div>
+                                
+                            </div>
+                            
+                      ReactDOM.render(jh4,document.getElementById('d5'))
+        </script>
+    </body>
+</html>
